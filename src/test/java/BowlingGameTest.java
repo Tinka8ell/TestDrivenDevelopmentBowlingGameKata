@@ -16,4 +16,16 @@ class BowlingGameTest {
         assertEquals(0, score, scores);
     }
 
+    @Test
+    public void checkAllSingles(){
+        // set up
+        String scores = "11 11 11 11 11 11 11 11 11 11"; // 10 frames of 2 singles
+
+        // do it
+        int score = BowlingGame.score(scores);
+
+        // check it
+        assertEquals(20, score, scores);
+    }
+
 }

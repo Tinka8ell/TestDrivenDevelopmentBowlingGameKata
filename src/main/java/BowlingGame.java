@@ -1,6 +1,6 @@
 public class BowlingGame {
 
     public static int score(String scores){
-        return 0;
+        return scores.chars().filter(c -> c >= '0' && c <= '9').map(c -> c - '0').sum();
     }
 }
