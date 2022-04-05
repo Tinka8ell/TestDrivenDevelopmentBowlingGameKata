@@ -52,4 +52,30 @@ class BowlingGameTest {
         assertEquals(300, score, scores);
     }
 
+    @Test
+    public void checkMaxStrikesOrSpares(){
+        // set up
+        String scores = "9- 9- 9- 9- 9- 9- 9- 9- 9- 9-"; // 10 frames of 9 and 0 bonus strikes
+
+        // do it
+        int score = BowlingGame.score(scores);
+
+        // check it
+        assertEquals(90, score, scores);
+    }
+
+    @Test
+    public void checkAllSpares(){
+        // set up
+        String scores = "5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/5"; // 10 frames of strikes and 1 bonus strike of 5
+
+        // do it
+        int score = BowlingGame.score(scores);
+
+        // check it
+        assertEquals(150, score, scores);
+    }
+
+
+
 }

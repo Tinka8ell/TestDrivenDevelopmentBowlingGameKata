@@ -37,7 +37,7 @@ public class BowlingGame {
                     }
                     strikes = spares;
                 }
-                if (pins == 'X' && frameNumber < 10)
+                if ((pins == 'X' || pins == '/') && frameNumber < 10)
                     strikes.add(pins);
             }
         }
